@@ -6,4 +6,54 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <servlet>
+        <servlet-name>alpha</servlet-name>
+        <servlet-class>servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>alpha</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addStudent</servlet-name>
+        <servlet-class>servlet.AddStudentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addStudent</servlet-name>
+        <url-pattern>/student/addStudent.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>ListStudentServlet</servlet-name>
+    <servlet-class>servlet.ListStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListStudentServlet</servlet-name>
+        <url-pattern>/student/listStudent.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <servlet-class>servlet.DeleteStudentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <url-pattern>/student/deleteStudent.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditStudentServlet</servlet-name>
+        <servlet-class>servlet.EditStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditStudentServlet</servlet-name>
+        <url-pattern>/student/editStudent.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>servlet.UpdateStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/student/updateStudent.do</url-pattern>
+    </servlet-mapping>
 </web-app>

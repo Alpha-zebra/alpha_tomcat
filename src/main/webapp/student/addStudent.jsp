@@ -15,7 +15,9 @@
 <%--<%--%>
     <%--request.setCharacterEncoding("utf-8");--%>
 <%--%>--%>
-<form action="doaddStudent.jsp" method="post">
+<%--<form action="doaddStudent.jsp" method="post">--%>
+<%--//前面没有/ 所以相对当前请求取地址会在前面自动加上 student 所以mapping中前面要有--%>
+<form action="addStudent.do" method="post">
     name:<input name="name" type="text">
     sex:<input name="gender" type="radio" value="男"> 男
         <input name="gender" type="radio" value="女"> 女

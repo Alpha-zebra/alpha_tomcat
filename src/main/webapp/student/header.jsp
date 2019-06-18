@@ -9,7 +9,7 @@
 <html>
 <head>
     <a href="addStudent.jsp">add student</a>
-    <a href="listStudent.jsp">show student</a>
+    <a href="listStudent.do">show student</a>
 
 </head>
 

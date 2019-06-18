@@ -19,12 +19,13 @@
     StudentDao dao=new StudentDaoImpl();
     Student student=dao.get(id);
     request.setAttribute("student",student);
+//    Student student = (Student) request.getAttribute("student");
 
 %>
 <script>
     document.getElementsByName("gender")
 </script>
-<form action="doUpdateStudent.jsp" method="post">
+<form action="updateStudent.do" method="post">
     id:<input type="hidden" name="id" value="${student.id}">
     name:<input name="name" type="text" value="${student.name}">
     gender:<input name="gender" type="radio" value="男"

@@ -10,15 +10,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    request.setCharacterEncoding("utf-8");
-
-    Student student=new Student(
-           Integer.parseInt(request.getParameter("id")) ,
-            request.getParameter("name"),
-            request.getParameter("gender"),
-            DateUtils.strConvertDate(request.getParameter("bornday"),"yyyy-MM-dd'T'HH:mm")
-    );
-    StudentDao dao=new StudentDaoImpl();
-    dao.update(student);
-    response.sendRedirect("listStudent.jsp");
+//    request.setCharacterEncoding("utf-8");
+//
+//    Student student=new Student(
+//           Integer.parseInt(request.getParameter("id")) ,
+//            request.getParameter("name"),
+//            request.getParameter("gender"),
+//            DateUtils.strConvertDate(request.getParameter("bornday"),"yyyy-MM-dd'T'HH:mm")
+//    );
+//    StudentDao dao=new StudentDaoImpl();
+//    dao.update(student);
+//    response.sendRedirect("listStudent.jsp");
 %>

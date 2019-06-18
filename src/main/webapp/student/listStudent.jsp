@@ -17,10 +17,10 @@
 </head>
 <body>
 <%
-    String sql="select * from student";
-    StudentDao dao=new StudentDaoImpl();
-    List<Student> students=dao.list();
-    request.setAttribute("students",students);
+//    String sql="select * from student";
+//    StudentDao dao=new StudentDaoImpl();
+//    List<Student> students=dao.list();
+//    request.setAttribute("students",students);
 
 %>
 <table>
@@ -39,7 +39,7 @@
             <td>${student.bornday}</td>
             <td>
                 <a href="doEditStudent.jsp?id=${student.id}">edit</a>
-                <a href="doDeleteStudent.jsp?id=${student.id}">delete</a>
+                <a href="deleteStudent.do?id=${student.id}">delete</a>
             </td>
         </tr>
     </c:forEach>
