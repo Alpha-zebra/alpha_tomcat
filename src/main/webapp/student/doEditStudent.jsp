@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="jdbc.pojo.Student" %>
 <%@ page import="jdbc.dao.StudentDao" %>
 <%@ page import="jdbc.dao.StudentDaoImpl" %>
@@ -28,18 +30,21 @@
 <form action="updateStudent.do" method="post">
     id:<input type="hidden" name="id" value="${student.id}">
     name:<input name="name" type="text" value="${student.name}">
-    gender:<input name="gender" type="radio" value="男"
-       <% if (student.getGender().equals("男")) out.print("checked");%>
-        > 男
-    <input name="gender" type="radio" value="女"
-        <% if (student.getGender().equals("女")) out.print("checked");%>
-    > 女
-    bornday:<input type="datetime-local" name="bornday" value="
-    <%=DateUtils.dateConvertStr(student.getBornday(),"yyyy-MM-dd'T'HH:mm")%>
-    ">
-    -------------------------------------------------------------------------
-    bornday:<input type="datetime-local" name="bornday" value="${student.bornday}">
+    <%--gender:<input name="gender" type="radio" value="男"--%>
+       <%--<% if (student.getGender().equals("男")) out.print("checked");%>--%>
+        <%--> 男--%>
+    <%--<input name="gender" type="radio" value="女"--%>
+        <%--<% if (student.getGender().equals("女")) out.print("checked");%>--%>
+    <%--> 女--%>
+    <%--bornday:<input type="datetime-local" name="bornday" value="--%>
+    <%--<%=DateUtils.dateConvertStr(student.getBornday(),"yyyy-MM-dd'T'HH:mm")%>--%>
+    <%--">--%>
+    gender:<input type="radio" checked value="男" name="gender">男
+    <input type="radio" <c:if test="${student.gender eq '女'}">checked</c:if> value="女" name="gender">女
+    <fmt:formatDate value="${student.bornday}" var="birthday" pattern="yyyy-MM-dd'T'HH:mm" scope="page"></fmt:formatDate>
+    bornday:<input type="datetime-local" name="bornday" value="${birthday}">
     <input type="submit" value="submit">
+
 </form>
 </body>
 </html>

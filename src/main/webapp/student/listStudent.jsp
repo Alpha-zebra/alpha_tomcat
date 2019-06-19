@@ -39,6 +39,7 @@
             <td>${student.bornday}</td>
             <td>
                 <a href="doEditStudent.jsp?id=${student.id}">edit</a>
+                <a href="doEditStudent.jsp?id=${student.id}">edit</a>
                 <a href="deleteStudent.do?id=${student.id}">delete</a>
             </td>
         </tr>
